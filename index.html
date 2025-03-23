@@ -70,34 +70,6 @@
         margin-top: 1.5rem;
       }
 
-      .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .countdown-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .countdown-number {
-        font-size: 2.5rem;
-        font-weight: bold;
-        background: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-
-      .countdown-label {
-        font-size: 0.9rem;
-        color: #b3b3b3;
-        text-transform: uppercase;
-      }
-
       .social-links {
         display: flex;
         justify-content: center;
@@ -139,14 +111,6 @@
           font-size: 1.2rem;
         }
 
-        .countdown {
-          gap: 1rem;
-        }
-
-        .countdown-number {
-          font-size: 1.8rem;
-        }
-      }
 
       .neural-loader {
         position: absolute;
@@ -211,27 +175,6 @@
       </p>
       <p class="quote-author">— Steve Jobs</p>
       <p class="domain">shikharadhikari.com.np</p>
-
-      <div class="countdown">
-        <div class="countdown-item">
-          <span class="countdown-number" id="days">30</span>
-          <span class="countdown-label">Days</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="hours">24</span>
-          <span class="countdown-label">Hours</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="minutes">60</span>
-          <span class="countdown-label">Minutes</span>
-        </div>
-        <div class="countdown-item">
-          <span class="countdown-number" id="seconds">60</span>
-          <span class="countdown-label">Seconds</span>
-        </div>
-      </div>
-
-      <p class="launch-message">Launching Soon</p>
 
       <div class="social-links">
         <a href="https://www.linkedin.com/in/shikhar-adhikari-8121b1292/" target="_blank" class="social-icon">
@@ -371,31 +314,6 @@
       });
 
 
-const launchDate = new Date("2025-04-21T00:00:00");
-
-const countdownTimer = setInterval(function() {
-  const now = new Date().getTime();
-    
-  const distance = launchDate - now;
-    
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-  document.getElementById("days").innerText = days;
-  document.getElementById("hours").innerText = hours;
-  document.getElementById("minutes").innerText = minutes;
-  document.getElementById("seconds").innerText = seconds;
-    
-  if (distance < 0) {
-    clearInterval(countdownTimer);
-    document.getElementById("days").innerText = "0";
-    document.getElementById("hours").innerText = "0";
-    document.getElementById("minutes").innerText = "0";
-    document.getElementById("seconds").innerText = "0";
-    document.querySelector(".launch-message").innerText = "Website Launched!";
-  }
-}, 1000);    </script>
+ </script>
   </body>
 </html>
